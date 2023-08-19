@@ -19,7 +19,7 @@ In this tutorial, we'll explore an easy-to-understand regex pattern for validati
 
 ## Regex Components
 
-In this section, we will break down the regex pattern /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/ and explain each of its components.
+In this section, we will break down the regex pattern /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]_)_\/?$/ and explain each of its components.
 
 ### Anchors
 
@@ -32,21 +32,24 @@ Quantifiers specify the number of occurrences of the preceding element. In this 
 ### Grouping Constructs
 
 Grouping constructs ( ) are used to group subpatterns together. In this regex pattern, there are multiple groups:
+
 - (https?:\/\/): This group matches the optional http:// or https:// protocol at the beginning of the URL.
 - ([\da-z\.-]+): This group matches the domain name, which can consist of one or more lowercase letters, digits, dots, or hyphens.
 - \.([a-z\.]{2,6}): This group matches the top-level domain (TLD), which consists of a dot followed by 2 to 6 lowercase letters or dots.
-- ([\/\w \.-]*)*: This group matches optional paths and query parameters. It allows for zero or more occurrences of characters, including forward slashes, word characters, spaces, dots, or hyphens.
+- ([\/\w \.-]_)_: This group matches optional paths and query parameters. It allows for zero or more occurrences of characters, including forward slashes, word characters, spaces, dots, or hyphens.
 - \/?: This matches an optional trailing forward slash at the end of the URL.
 
 ### Bracket Expressions
 
 Bracket expressions [ ] are used to define a set of characters that can match at a specific position in the pattern. In this regex pattern, we have two bracket expressions:
+
 - [\da-z\.-]: This matches any digit (\d), lowercase letter (a-z), dot (\.), or hyphen (-).
 - [a-z\.]: This matches any lowercase letter (a-z) or dot (\.).
 
 ### Character Classes
 
 Character classes are used to match a single character from a specific set or range. In this regex pattern, we have the following character classes:
+
 - \d: This matches any digit from 0 to 9.
 
 ### The OR Operator
@@ -60,6 +63,7 @@ Flags are used to modify the behavior of the regex matching. In this regex patte
 ### Character Escapes
 
 Character escapes are used to match special characters or to give them a special meaning. In this regex pattern, we have the following character escapes:
+
 - \/: This matches a forward slash character.
 
 ## Author
